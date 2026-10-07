@@ -12,7 +12,8 @@ export interface DbProduct {
 
 export const db = SQLite.openDatabaseSync('pos_inventory.db');
 
-const SEED: Array<[string, string, number, number]> = [
+type SeedRow = [string, string, number, number];
+const SEED: SeedRow[] = [
   ['Spanish Latte', 'Espresso', 140, 42],
   ['Americano', 'Espresso', 95, 35],
   ['Cappuccino', 'Espresso', 120, 28],
